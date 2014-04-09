@@ -1,0 +1,13 @@
+- name: Install redis if CentOS/RHEL
+  yum: name={{ redis_service }} state=present
+
+- name: Open iptables if CentOS/RHEL
+  lineinfile: dest={{ iptables_loc }}
+              line="-A INPUT -p tcp -m tcp --dport {{ master_port }} -j ACCEPT"
+              insertafter="^:OUTPUT ACCEPT \[\d*:\d*\]$"
+  notify:
+    - restart iptables
+
+- name: Make config file for EPEL Version install
+  template: src=redis.conf.j2 dest={{ redis_config }}
+  notify: restart redis

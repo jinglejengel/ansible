@@ -1,0 +1,19 @@
+---
+# Ports for Redis master and slave
+master_port: 6379
+slave_port: 6379
+
+# IP for master
+#master_ip:
+
+# Path for log file
+redis_log: /var/log/redis/redis-server.log
+
+# Dir for redis
+redis_dir: /var/lib/redis
+
+# Use append only file?
+append_only: "no"
+
+# Use sentinel?
+sentinel: True

@@ -1,0 +1,7 @@
+---
+redis_service: redis
+redis_config: /etc/redis.conf
+redis_pid: /var/run/redis/redis.pid
+
+iptables_loc: '/etc/sysconfig/iptables'
+iptables_service: iptables

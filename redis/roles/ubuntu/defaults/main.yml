@@ -1,0 +1,4 @@
+---
+redis_service: redis-server
+redis_config: /etc/redis/redis.conf
+redis_pid: /var/run/redis/redis-server.pid

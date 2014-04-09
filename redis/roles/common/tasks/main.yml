@@ -1,0 +1,3 @@
+---
+- name: Ensure redis is running, and set to start on boot
+  service: name={{ redis_service }} enabled=yes state=started

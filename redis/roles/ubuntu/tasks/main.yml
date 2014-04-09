@@ -1,0 +1,6 @@
+- name: Install redis-server if Ubuntu
+  apt: pkg={{ redis_service }} update_cache=yes cache_valid_time=86400 state=present
+
+- name: Generate config file for Ubuntu Install
+  template: src=redis.conf.j2 dest={{ redis_config }}
+  notify: restart redis

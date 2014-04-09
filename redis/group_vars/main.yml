@@ -1,0 +1,15 @@
+---
+# Location of your creds file
+creds_file: ~/.raxpub
+
+# Your Rackspace flavour
+rax_flavour: performance1-1
+
+# Your Rackspace image
+rax_image: 72b301e5-7b66-4419-9613-5f342defe0aa
+
+# Name of your Rackspace pub key
+rax_key: ans_cont
+
+# Number of slaves
+num_slaves: 1
