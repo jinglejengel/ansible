@@ -6,6 +6,8 @@ Set up an SSH key prior to use to make Ansible that much easier. Change the valu
 Example .raxpub file:
 
 [rackspace_cloud]
+
 username = myclouduser
+
 api_key = XXXXXXXXXXXXXX
 
