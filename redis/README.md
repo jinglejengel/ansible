@@ -14,9 +14,9 @@ api_key = XXXXXXXXXXXXXX
 Topographical Breakdown:
 
 ```
-# Where global variables go, like your rax_pub, image, flavour, etc.
+# Where global variables go
 ./group_vars
-  | # Full of the main goods
+  | # Full of the main goods, like your rax_pub, image, flavour, etc.
   └ ./group_vars/main.yml
 
 ./hosts
