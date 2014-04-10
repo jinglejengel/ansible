@@ -1,2 +1,5 @@
 - name: restart redis
   service: name={{ redis_service }} state=restarted
+
+- name: restart redis-sentinel
+  service: name={{ sentinel_service }} state=restarted

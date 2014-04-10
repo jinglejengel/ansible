@@ -15,5 +15,17 @@ redis_dir: /var/lib/redis
 # Use append only file?
 append_only: "no"
 
-# Use sentinel?
-sentinel: True
+# Use sentinel? NOT WORKING CURRENTLY needs 2.8+ to be stable
+sentinel: False
+
+# Sentinel service
+sentinel_service: redis-sentinel
+
+# Path for sentinel log
+redis_sentinel_log: /var/log/redis/redis-sentinel.log
+
+# Path for sentinel conf
+redis_sentinel_conf: /etc/redis/sentinel.conf
+
+# Path for sentinel init script
+redis_sentinel_init: /etc/init.d/redis-sentinel.conf

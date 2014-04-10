@@ -1,3 +1,16 @@
 ---
 - name: Ensure redis is running, and set to start on boot
   service: name={{ redis_service }} enabled=yes state=started
+
+- name: Place the sentinel conf file if sentinel is to be run
+  template: src=sentinel.conf.j2 dest={{ redis_sentinel_conf }}
+  when: sentinel is True
+
+- name: Place the sentinel init script if sentinel is to be run
+  template: src=redis-sentinel.j2 dest={{ redis_sentinel_init }}
+  notify: restart redis-sentinel
+  when sentinel is True
+
+- name: Ensure redis-sentinel is running and set to start on boot
+  service: name={{ sentinel_service }} enabled=yes state=started
+  when: sentinel is True

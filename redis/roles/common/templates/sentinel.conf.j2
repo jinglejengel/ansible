@@ -1,0 +1,11 @@
+# Daemonize the sentinel process
+daemonize yes
+
+# Core Seninel conf
+sentinel monitor mymaster {{ hostvars[groups['redismaster'][0]]['ansible_eth0']['ipv4']['address']  }} {{ master_port }} 2
+sentinel down-after-milliseconds mymaster 10000
+sentinel failover-timeout mymaster 180000
+sentinel parallel-syncs mymaster 1
+
+# Log File
+logfile {{ redis_sentinel_log }}
