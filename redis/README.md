@@ -61,6 +61,9 @@ Topographical Breakdown:
       └ ./roles/common/tasks/main.yml
     | # Where we store templates for configs
     └ ./roles/common/templates
+        | # Sentinel placements, not working needs redis 2.8+
+        | ./roles/common/templates/sentinel.conf.j2
+        └ ./roles/common/templates/redis-sentinel.j2
   
   | # The roles to deploy on Ubuntu hosts
   └ ./roles/ubuntu
