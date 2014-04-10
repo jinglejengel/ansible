@@ -1,4 +1,4 @@
-anisble
+ansible
 =======
 
 Ansible play books
