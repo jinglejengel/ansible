@@ -1,3 +1,6 @@
+- name: Enable the remi repo
+  template: src=remi.repo.j2 dest=/etc/yum.repos.d/remi.repo
+
 - name: Install redis if CentOS/RHEL
   yum: name={{ redis_service }} state=present
 
