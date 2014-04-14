@@ -3,7 +3,7 @@
   service: name={{ redis_service }} enabled=yes state=started
 
 - name: Place the sentinel conf file if sentinel is to be run
-  template: src=sentinel.conf.j2 dest={{ redis_sentinel_conf }}
+  template: src=sentinel.conf.j2 dest={{ sentinel_conf }}
   when: sentinel is True
   notify: restart redis-sentinel
 
