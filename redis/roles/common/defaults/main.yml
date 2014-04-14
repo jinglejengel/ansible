@@ -4,7 +4,7 @@ master_port: 6379
 slave_port: 6379
 
 # IP for master
-#master_ip:
+master_ip: {{ hostvars[groups['redismaster'][0]]['ansible_eth0']['ipv4']['address']  }}
 
 # Path for log file
 redis_log: /var/log/redis/redis-server.log
