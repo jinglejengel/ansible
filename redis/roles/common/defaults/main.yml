@@ -22,10 +22,7 @@ sentinel: False
 sentinel_service: redis-sentinel
 
 # Path for sentinel log
-redis_sentinel_log: /var/log/redis/redis-sentinel.log
+sentinel_log: /var/log/redis/redis-sentinel.log
 
-# Path for sentinel conf
-redis_sentinel_conf: /etc/redis/sentinel.conf
-
-# Path for sentinel init script
-redis_sentinel_init: /etc/init.d/redis-sentinel.conf
+# Sentinel port
+sentinel_port: 26379
