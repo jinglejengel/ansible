@@ -5,3 +5,5 @@ redis_pid: /var/run/redis/redis.pid
 
 iptables_loc: '/etc/sysconfig/iptables'
 iptables_service: iptables
+
+sentinel_conf: /etc/redis-sentinel.conf
