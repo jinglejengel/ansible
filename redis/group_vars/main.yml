@@ -5,7 +5,7 @@ creds_file: ~/.raxpub
 # Your Rackspace flavour
 rax_flavour: performance1-1
 
-# Your Rackspace image
+# Your Rackspace image. NOTE: If you plan to use Sentinel, please use CentOS 6.5
 rax_image: 72b301e5-7b66-4419-9613-5f342defe0aa
 
 # Name of your Rackspace pub key
