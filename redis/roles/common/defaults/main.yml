@@ -15,7 +15,7 @@ redis_dir: /var/lib/redis
 # Use append only file?
 append_only: "no"
 
-# Use sentinel? NOT WORKING CURRENTLY needs 2.8+ to be stable
+# Use sentinel? Working for CentOS 6.5 using remi... needs 2.8+ to be stable
 sentinel: False
 
 # Sentinel service
