@@ -42,7 +42,8 @@ Topographical Breakdown:
       └ ./roles/centos/tasks/main.yml
     | # Where we store templates for configs
     └ ./roles/centos/templates
-      | # The template for redis.conf on CentOS (Due to versioning)
+      | # The template for the remi repo and redis.conf on CentOS (Due to versioning)
+      | ./roles/centos/templates/remi.repo.j2
       └ ./roles/centos/templates/redis.conf.j2
   
   | # The Roles to deploy on ALL hosts
@@ -61,8 +62,9 @@ Topographical Breakdown:
       └ ./roles/common/tasks/main.yml
     | # Where we store templates for configs
     └ ./roles/common/templates
-        | # Sentinel placements, not working needs redis 2.8+
+        | # Sentinel placements, Works with remi repos on CentOS 6.5 needs redis 2.8+
         | ./roles/common/templates/sentinel.conf.j2
+        | # Will probably be removed soon
         └ ./roles/common/templates/redis-sentinel.j2
   
   | # The roles to deploy on Ubuntu hosts
