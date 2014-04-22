@@ -4,6 +4,9 @@
 # The port that this sentinel instance will run on
 port {{ sentinel_port }}
 
+# daemonize sentinel
+daemonize yes
+
 # Specify the log file name. Also the empty string can be used to force
 # Redis to log on the standard output. Note that if you use standard
 # output for logging but daemonize, logs will be sent to /dev/null
